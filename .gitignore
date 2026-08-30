@@ -1,0 +1,17 @@
+# Data
+data/*.csv
+data/*.zip
+
+# Trained models
+models/*.pkl
+models/*.joblib
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
