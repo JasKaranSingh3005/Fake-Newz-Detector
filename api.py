@@ -26,7 +26,11 @@ MAX_TEXT_LENGTH = 20000
 # Comma-separated list of allowed origins, e.g. "https://truthlens.vercel.app,http://localhost:5173"
 # Defaults to "*" for local development — restrict this in production.
 CORS_ORIGINS = os.environ.get("CORS_ORIGINS", "*")
-allow_origins = ["*"] if CORS_ORIGINS.strip() == "*" else [o.strip() for o in CORS_ORIGINS.split(",")]
+allow_origins = (
+    ["*"]
+    if CORS_ORIGINS.strip() == "*"
+    else [o.strip().rstrip("/") for o in CORS_ORIGINS.split(",")]
+)
 
 app = FastAPI(
     title="Fake News Detector API",
@@ -106,6 +110,7 @@ def predict(req: PredictRequest):
     cleaned = clean_text(req.text)
     vec = vectorizer.transform([cleaned])
     pred = model.predict(vec)[0]
+    # WELFake convention: label 0 = fake, label 1 = real
     label = "FAKE" if pred == 1 else "REAL"
 
     confidence = None
