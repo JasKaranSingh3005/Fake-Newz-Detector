@@ -2,9 +2,9 @@
 data/*.csv
 data/*.zip
 
-# Trained models
-models/*.pkl
-models/*.joblib
+# Trained models are committed on purpose so the deployed API has
+# something to load (the dataset itself is too large to ship).
+# If your .pkl files grow large, switch to Git LFS instead.
 
 # Python
 __pycache__/

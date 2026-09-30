@@ -1,0 +1,54 @@
+name: Scheduled Retrain
+
+# Retrains the models monthly and on manual trigger, then commits
+# updated model artifacts + a metrics log entry back to the repo.
+#
+# Requires two repo secrets (Settings -> Secrets and variables -> Actions):
+#   KAGGLE_USERNAME
+#   KAGGLE_KEY
+# (from your Kaggle account -> Settings -> API -> Create New Token)
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"  # 03:00 UTC on the 1st of every month
+  workflow_dispatch: {}   # allows manual "Run workflow" from the Actions tab
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install kaggle
+
+      - name: Download dataset from Kaggle
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          mkdir -p data
+          kaggle datasets download -d saurabhshahane/fake-news-classification -p data --unzip
+
+      - name: Train models
+        run: python src/train.py
+
+      - name: Log metrics with timestamp
+        run: python src/monitor.py --log-training-run
+
+      - name: Commit updated models and metrics log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add models/*.pkl metrics_log.csv
+          git diff --cached --quiet || git commit -m "Automated retrain $(date -u +'%Y-%m-%d')"
+          git push
