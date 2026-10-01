@@ -26,7 +26,7 @@ export default function HowItWorks() {
                 />
               )}
               <div className="relative w-12 h-12 mx-auto rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
-                <step.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+                <step.icon className="w-5 h-5 text-accent" aria-hidden="true" />
               </div>
               <h3 className="mt-4 text-sm font-semibold text-ink">{step.title}</h3>
               <p className="mt-1.5 text-xs text-ink-soft leading-relaxed">{step.desc}</p>
