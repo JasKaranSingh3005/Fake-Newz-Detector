@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Circle } from 'lucide-react'
 import { checkHealth } from '../lib/api'
 
 export default function HealthBadge() {
@@ -12,7 +11,6 @@ export default function HealthBadge() {
       if (mounted) setOnline(result)
     }
     check()
-    // Reasonable polling interval — not hammering the endpoint
     const interval = setInterval(check, 60000)
     return () => {
       mounted = false
@@ -20,13 +18,17 @@ export default function HealthBadge() {
     }
   }, [])
 
-  const label = online === null ? 'Checking…' : online ? 'API Connected' : 'API Offline'
-  const color = online === null ? 'text-slate-400' : online ? 'text-real' : 'text-fake'
+  const label = online === null ? 'CHECKING' : online ? 'LIVE' : 'OFFLINE'
+  const dot = online === null ? 'bg-ink-faint' : online ? 'bg-real' : 'bg-fake'
 
   return (
-    <div className={`flex items-center gap-1.5 text-xs font-medium ${color}`} role="status" aria-live="polite">
-      <Circle className="w-2 h-2 fill-current" aria-hidden="true" />
-      <span>{label}</span>
+    <div
+      className="flex items-center gap-1.5 font-mono text-[11px] tracking-wider text-ink-soft border border-rule-strong rounded px-2 py-1"
+      role="status"
+      aria-live="polite"
+    >
+      <span className={`w-1.5 h-1.5 rounded-full ${dot}`} aria-hidden="true" />
+      {label}
     </div>
   )
 }

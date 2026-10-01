@@ -22,6 +22,7 @@ def predict(text: str, model_name: str, models_dir: str = "models"):
     vec = vectorizer.transform([cleaned])
     pred = model.predict(vec)[0]
 
+    # WELFake convention: label 0 = fake, label 1 = real
     label = "FAKE" if pred == 1 else "REAL"
 
     # Not every model exposes predict_proba (e.g. PassiveAggressiveClassifier doesn't)

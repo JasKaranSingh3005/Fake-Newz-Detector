@@ -23,6 +23,8 @@ def main(model_name: str, data_path: str, models_dir: str):
 
     preds = model.predict(X_test)
 
+    # WELFake convention: label 0 = fake, label 1 = real — sklearn orders
+    # by sorted label value, so index 0 here must be "Fake", not "Real".
     print(classification_report(y_test, preds, target_names=["Real", "Fake"]))
 
     cm = confusion_matrix(y_test, preds)

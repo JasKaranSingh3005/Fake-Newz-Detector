@@ -82,19 +82,11 @@ docker run -p 8000:8000 -e CORS_ORIGINS="*" truthlens-api
 
 **Backend → Render** (`render.yaml` included): connect the repo, Render builds from the `Dockerfile`. Set `CORS_ORIGINS` to your deployed frontend URL.
 
-<<<<<<< HEAD
 **Frontend → Vercel/Netlify**: point at `frontend/`, build command `npm run build`, output directory `frontend/dist`. Set `VITE_API_URL` to your deployed backend URL.
 
 *Deployed URLs are not filled in below — this repo has not been deployed yet. Fill these in after you deploy:*
 - API URL: `_not yet deployed_`
 - Frontend URL: `_not yet deployed_`
-=======
-| Model | Accuracy | F1-score |
-|---|---|---|
-| Logistic Regression | 0.9370231654875849 | 0.9391991428954064 |
-| Random Forest | 0.949993064225274 | 0.9521280127481575 |
-| Passive Aggressive | 0.9368844499930642 | 0.9393090569561158 |
->>>>>>> 40bd556601ad2ab5b91185aa08f138fd6a3e133e
 
 ## API Endpoints
 

@@ -18,8 +18,11 @@ export class ApiError extends Error {
 
 export async function checkHealth(): Promise<boolean> {
   try {
+    // Render's free tier can take 30-50s to wake from a cold start,
+    // so this needs real headroom — a short timeout here just
+    // reports "offline" for a backend that's merely still waking up.
     const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 5000)
+    const timeout = setTimeout(() => controller.abort(), 45000)
     const res = await fetch(`${API_URL}/`, { signal: controller.signal })
     clearTimeout(timeout)
     return res.ok
@@ -88,4 +91,31 @@ async function safeJson(res: Response): Promise<any | null> {
   } catch {
     return null
   }
+}
+
+export interface EnsembleResult extends PredictResponse {
+  latencyMs: number
+  error?: string
+}
+
+/** Calls all three models in parallel and returns real, individually-measured results. */
+export async function predictEnsemble(text: string): Promise<EnsembleResult[]> {
+  const models: ModelName[] = ['logistic_regression', 'random_forest', 'passive_aggressive']
+  return Promise.all(
+    models.map(async (model) => {
+      const start = performance.now()
+      try {
+        const res = await predict(text, model)
+        return { ...res, latencyMs: Math.round(performance.now() - start) }
+      } catch (err) {
+        return {
+          label: 'REAL' as const,
+          confidence: null,
+          model_used: model,
+          latencyMs: Math.round(performance.now() - start),
+          error: err instanceof ApiError ? err.message : 'Request failed',
+        }
+      }
+    })
+  )
 }
