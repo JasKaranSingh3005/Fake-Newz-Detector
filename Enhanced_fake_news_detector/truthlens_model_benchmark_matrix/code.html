@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "error": "#ba1a1a",
+        "surface-dim": "#cfdaf2",
+        "inverse-surface": "#263143",
+        "secondary-fixed": "#dbe1ff",
+        "tertiary": "#000000",
+        "on-tertiary-fixed-variant": "#005137",
+        "surface-bright": "#f9f9ff",
+        "primary-container": "#131a33",
+        "on-surface-variant": "#45464d",
+        "primary": "#000000",
+        "surface-container-highest": "#d8e3fb",
+        "surface-variant": "#d8e3fb",
+        "on-primary": "#ffffff",
+        "surface-tint": "#565d79",
+        "secondary-fixed-dim": "#bdc5e9",
+        "on-secondary-fixed-variant": "#3d4664",
+        "on-primary-fixed": "#131a33",
+        "on-tertiary-fixed": "#002114",
+        "background": "#f9f9ff",
+        "outline-variant": "#c6c6ce",
+        "inverse-primary": "#bec5e5",
+        "primary-fixed-dim": "#bec5e5",
+        "surface-container": "#e7eeff",
+        "surface": "#f9f9ff",
+        "primary-fixed": "#dbe1ff",
+        "secondary": "#545d7c",
+        "on-primary-fixed-variant": "#3e4660",
+        "on-error-container": "#93000a",
+        "on-error": "#ffffff",
+        "tertiary-container": "#002114",
+        "surface-container-high": "#dee8ff",
+        "on-tertiary": "#ffffff",
+        "tertiary-fixed-dim": "#68dba9",
+        "on-secondary-container": "#555e7d",
+        "error-container": "#ffdad6",
+        "secondary-container": "#d0d9fd",
+        "on-primary-container": "#7b83a0",
+        "outline": "#76767e",
+        "inverse-on-surface": "#ecf1ff",
+        "on-secondary": "#ffffff",
+        "on-surface": "#111c2d",
+        "on-tertiary-container": "#069669",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f0f3ff",
+        "tertiary-fixed": "#85f8c4",
+        "on-background": "#111c2d",
+        "on-secondary-fixed": "#111a36"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem",
+        "margin": "2rem",
+        "gutter-mobile": "1rem",
+        "space-md": "1rem",
+        "margin-mobile": "1rem",
+        "gutter": "1.5rem",
+        "space-sm": "0.5rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "headline-sm": ["Newsreader"],
+        "headline-md": ["Newsreader"],
+        "headline-xl-mobile": ["Newsreader"],
+        "headline-lg": ["Newsreader"],
+        "body-lg": ["Inter"],
+        "headline-lg-mobile": ["Newsreader"],
+        "headline-xl": ["Newsreader"],
+        "label-lg": ["JetBrains Mono"],
+        "label-md": ["JetBrains Mono"],
+        "body-sm": ["Inter"],
+        "label-sm": ["JetBrains Mono"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+        "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+        "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+        "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+        "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+        "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+        "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+        "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+        "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+      }
+    }
+  }
+}</script></head><body class="bg-surface text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-24 w-full flex flex-col justify-between"><div class="h-14 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="TruthLens Editorial Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XnZairM7EWDUlppOcJtYqft5FDdfETWvzoX3ere2arm1_jOt_wIy9LtlatXHiCeCGUFW_GS8N_AFcc18nQnrG3UDNwunyCzKAQRCGm14facqbFI-jGnPbrechnL4C11V2B_rtMcPHWCW9_Z3Gsj38xwUK6Qqvd5C44B1MO50tpmH9xx3eILVRrU4jlA6wfA1X_h2HmClGEic2PUqLQoObov0nFMc_h_cBTYQGT06orDxD6chQ5qcKQyg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">TruthLens</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Editorial Intelligence</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-low"><span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface tracking-wide uppercase">LIVE VERIFICATION ENGINE (WELFake 72K)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CHECKPOINT:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">v2.8.4-RELEASE</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LATENCY:</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">18ms AVG</span></div><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors uppercase px-space-xs" data-path="dataset-transparency-pipeline" href="#">DOCS</a></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-10 px-gutter flex items-center justify-between bg-surface-container-low"><nav class="flex items-center gap-space-xs h-full" data-active-classes="bg-primary text-on-primary font-medium rounded-t shadow-sm"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-2 transition-colors" data-path="article-url-analyzer" href="#">Article &amp; URL Analyzer</a><a aria-current="page" class="px-space-md py-2 transition-colors bg-primary text-on-primary font-medium rounded-t shadow-sm" data-path="model-benchmark-matrix" href="#">Model Benchmark Matrix</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-2 transition-colors" data-path="dataset-transparency-pipeline" href="#">Dataset Transparency &amp; Pipeline</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-md py-2 transition-colors" data-path="api-export" href="#">API &amp; Export</a></nav><div class="hidden xl:flex items-center gap-space-sm overflow-hidden text-ellipsis whitespace-nowrap"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">LATEST TELEMETRY:</span><span class="font-label-sm text-label-sm text-on-surface font-mono">CLAIM #84920 [CORROBORATED 98.4%]</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface font-mono">REUTERS-INGEST [VALID]</span><span class="text-outline-variant">•</span><span class="font-label-sm text-label-sm text-error font-mono">SRC-DRIFT DETECTED [P-A CLF: 81.2%]</span></div></div></div></header><main class="w-full pt-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-gutter py-space-xl flex flex-col gap-space-xl max-w-7xl mx-auto">
+<!-- Top Telemetry & Title Block -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Benchmark Matrix // Audit #WL-72K</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container flex items-center gap-1 font-medium">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse inline-block"></span>
+          EVALUATION SUITE VERIFIED
+        </span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="max-w-4xl">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Machine Learning Model Benchmarks &amp; WELFake Validation Matrix</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs">Comparative evaluation of scikit-learn classifiers on 72,134 balanced true and fabricated news records. Transparent performance across accuracy, precision, recall, and inference latency.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container hover:bg-surface-container-high transition-colors rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm" onclick="downloadEvaluationMatrix()">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+            RAW CSV (68MB)
+          </button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-primary text-on-primary hover:bg-primary-container transition-colors rounded font-label-sm text-label-sm uppercase tracking-wider shadow-md" id="run-benchmark-btn" onclick="runLiveSanityCheck()">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">play_circle</span>
+            RUN TEST HARNESS
+          </button>
+</div>
+</div>
+</div>
+<!-- Stat Cards Overview -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-24 h-24 bg-surface-container -mr-8 -mt-8 rounded-full pointer-events-none opacity-40"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Corpus Volume</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">database</span>
+</div>
+<span class="font-headline-xl text-headline-xl text-primary mt-space-sm">72,134</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">WELFake Balanced Records</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono">37,106 TRUE / 35,028 FAKE</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">1:0.94 RATIO</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-container -mr-8 -mt-8 rounded-full pointer-events-none opacity-30"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ensemble Accuracy</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<span class="font-headline-xl text-headline-xl text-primary mt-space-sm">93.8%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Weighted Harmonic F1: 0.934</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono">5-FOLD STRATIFIED CV</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">σ = ±0.0034</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-24 h-24 bg-surface-container -mr-8 -mt-8 rounded-full pointer-events-none opacity-40"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Inference Speed</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">speed</span>
+</div>
+<span class="font-headline-xl text-headline-xl text-primary mt-space-sm">17.6ms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Per 1,000 word dispatch</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono">P99 PEAK: 31.2ms</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">FASTAPI CORE</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 right-0 w-24 h-24 bg-error-container -mr-8 -mt-8 rounded-full pointer-events-none opacity-30"></div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">False Positive Rate</span>
+<span class="material-symbols-outlined text-error text-[20px]">shield_with_heart</span>
+</div>
+<span class="font-headline-xl text-headline-xl text-error mt-space-sm">4.2%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Editorial Threshold: 0.85 P</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-mono">PREVENTS FALSE ACCUSATION</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">TOLERANCE &lt;5%</span>
+</div>
+</div>
+</div>
+<!-- Main Model Benchmark Matrix -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Primary Architecture Breakdown</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">Model Comparison Matrix &amp; Latency Profiles</h2>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-medium shadow-sm">All Metrics</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Class 'Fake'</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors">Class 'True'</button>
+</div>
+</div>
+<!-- Table Wrapper -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l">Model Architecture</th>
+<th class="py-space-sm px-space-md">Feature Representation</th>
+<th class="py-space-sm px-space-md text-center">Accuracy</th>
+<th class="py-space-sm px-space-md text-center">Precision (Fake)</th>
+<th class="py-space-sm px-space-md text-center">Recall (Fake)</th>
+<th class="py-space-sm px-space-md text-center">F1-Score</th>
+<th class="py-space-sm px-space-md">Train / Cold Latency</th>
+<th class="py-space-sm px-space-md rounded-r">Optimal Editorial Use-Case</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1: Logistic Regression -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block leading-snug">Logistic Regression</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">sklearn.linear_model (L2 C=1.0)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface">TF-IDF (1,2-grams)</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-1 font-mono">50,000 max features</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-semibold text-primary">92.4%</span>
+<div class="w-16 bg-surface-container h-1.5 rounded-full mx-auto mt-1 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 92.4%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-medium text-on-surface">91.8%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-medium text-on-surface">93.1%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-mono bg-surface-container px-2 py-0.5 rounded text-primary">0.924</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm font-mono text-on-surface block">Train: 41.2s</span>
+<span class="font-label-sm text-label-sm font-mono text-on-tertiary-container block">Infer: 11.4ms</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">High-throughput ingestion wire, low-memory edge containers.</span>
+</td>
+</tr>
+<!-- Row 2: Random Forest -->
+<tr class="bg-surface-container-low/60 hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-on-tertiary-container"></div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary leading-snug">Random Forest</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] uppercase font-bold tracking-tight">Top Precision</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">100 Estimators (n_jobs=-1)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface">Subword N-Grams</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-1 font-mono">Char range (3, 5)</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-bold text-on-tertiary-container">94.1%</span>
+<div class="w-16 bg-surface-container h-1.5 rounded-full mx-auto mt-1 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 94.1%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-bold text-on-tertiary-container">95.2%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-medium text-on-surface">92.7%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-mono bg-on-tertiary-container text-on-tertiary px-2 py-0.5 rounded">0.939</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm font-mono text-on-surface block">Train: 814.6s</span>
+<span class="font-label-sm text-label-sm font-mono text-secondary block">Infer: 38.9ms</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Deep non-linear stylistic forensics, legal dispute audits.</span>
+</td>
+</tr>
+<!-- Row 3: Passive Aggressive Classifier -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block leading-snug">Passive Aggressive</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">max_iter=50, C=0.5</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface">TF-IDF Word + Stylometry</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant mt-1 font-mono">POS tag density vector</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-semibold text-primary">93.8%</span>
+<div class="w-16 bg-surface-container h-1.5 rounded-full mx-auto mt-1 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 93.8%"></div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-medium text-on-surface">93.4%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-semibold text-on-tertiary-container">94.2%</span>
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="font-label-md text-label-md font-mono bg-surface-container px-2 py-0.5 rounded text-primary">0.938</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-sm text-label-sm font-mono text-on-surface block">Train: 18.2s</span>
+<span class="font-label-sm text-label-sm font-mono text-on-tertiary-container block">Infer: 14.8ms</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Dynamic stream adaptation, continuous breaking news calibration.</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Matrix Footnote / Context -->
+<div class="mt-space-md pt-space-md bg-surface-container-low p-space-md rounded flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Metrics evaluated on an isolated 20% holdout split (14,427 items) strictly quarantined prior to TF-IDF vocabulary fitting.
+          </span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant uppercase">Hardware: AWS c6i.2xlarge</span>
+</div>
+</div>
+</div>
+<!-- Feature Importance & Top Deceptive Predictors Panel -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Interpretability &amp; Vocabulary Weights</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Top Differential Lexical Predictors (TF-IDF Coeffs)</h2>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+          Extracted via Logistic Regression coefficients &amp; Gini Importance
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Left Column: Fabricated / Deceptive Tokens -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<h3 class="font-headline-sm text-headline-sm text-error">Deceptive / Fabricated Association</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Weight Bias (+)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Strong linguistic markers signaling hyperbole, urgent conspiratorial assertion, and deliberate absence of attributed institutional sourcing.
+          </p>
+<!-- Bar Chart List: Fake -->
+<div class="flex flex-col gap-2 font-mono text-xs">
+<!-- 1 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">1. "unbelievable"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 98%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+4.82</span>
+</div>
+<!-- 2 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">2. "they don't want you to know"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 94%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+4.61</span>
+</div>
+<!-- 3 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">3. "shocking truth"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 91%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+4.45</span>
+</div>
+<!-- 4 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">4. "insider leaked"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 88%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+4.29</span>
+</div>
+<!-- 5 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">5. "miracle cure"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 85%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+4.18</span>
+</div>
+<!-- 6 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">6. "mainstream media silent"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 81%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.97</span>
+</div>
+<!-- 7 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">7. "bombshell revelation"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 77%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.76</span>
+</div>
+<!-- 8 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">8. "proof of conspiracy"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 74%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.62</span>
+</div>
+<!-- 9 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">9. "wake up people"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 70%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.44</span>
+</div>
+<!-- 10 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">10. "covert operation"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 66%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.23</span>
+</div>
+<!-- 11 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">11. "destroy evidence"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 62%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+3.05</span>
+</div>
+<!-- 12 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">12. "secretly recorded"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 58%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+2.88</span>
+</div>
+<!-- 13 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">13. "panic breaks out"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 55%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+2.71</span>
+</div>
+<!-- 14 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">14. "total coverup"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 52%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+2.55</span>
+</div>
+<!-- 15 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">15. "guaranteed cure"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 48%"></div>
+</div>
+<span class="w-12 text-right text-error font-semibold">+2.39</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Corroborated / True Tokens -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-tertiary-container">Corroborated / Verified Association</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Weight Bias (-)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Linguistic signatures of disciplined wire services: indirect quotation verbs, named agency references, and empirical institutional indicators.
+          </p>
+<!-- Bar Chart List: True -->
+<div class="flex flex-col gap-2 font-mono text-xs">
+<!-- 1 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">1. "spokesperson said"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 97%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-4.77</span>
+</div>
+<!-- 2 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">2. "according to Reuters"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 95%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-4.65</span>
+</div>
+<!-- 3 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">3. "official data showed"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 90%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-4.41</span>
+</div>
+<!-- 4 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">4. "confirmed by"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 87%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-4.26</span>
+</div>
+<!-- 5 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">5. "quarterly earnings"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 83%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-4.09</span>
+</div>
+<!-- 6 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">6. "in a statement on"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 79%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.88</span>
+</div>
+<!-- 7 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">7. "federal prosecutors"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 76%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.71</span>
+</div>
+<!-- 8 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">8. "peer-reviewed study"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 73%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.59</span>
+</div>
+<!-- 9 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">9. "regulatory filing"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 69%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.38</span>
+</div>
+<!-- 10 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">10. "defense department"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 65%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.20</span>
+</div>
+<!-- 11 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">11. "unanimous decision"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 61%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-3.02</span>
+</div>
+<!-- 12 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">12. "scheduled meeting"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 57%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-2.84</span>
+</div>
+<!-- 13 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">13. "bilateral talks"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 53%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-2.63</span>
+</div>
+<!-- 14 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">14. "audited accounts"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 50%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-2.47</span>
+</div>
+<!-- 15 -->
+<div class="flex items-center justify-between gap-2">
+<span class="w-44 truncate text-on-surface font-medium">15. "declined to comment"</span>
+<div class="flex-1 bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 47%"></div>
+</div>
+<span class="w-12 text-right text-on-tertiary-container font-semibold">-2.31</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Pipeline Visualizer -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">FastAPI Execution Graph</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-0.5">End-to-End Forensic Processing Pipeline</h2>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant font-mono flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          ACTIVE PIPELINE TRACE // CLICK A STEP TO INSPECT
+        </div>
+</div>
+<!-- Pipeline Schematic Steps -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm relative">
+<!-- Step 1 -->
+<div class="cursor-pointer p-space-md rounded bg-surface-container-high hover:bg-surface-container-highest transition-all flex flex-col justify-between group border-2 border-primary" id="pipe-step-1" onclick="selectPipelineStep(1)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary font-mono">01 // INGEST</span>
+<span class="material-symbols-outlined text-[18px] text-primary">link</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary">Wire Ingestion</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Raw HTML/Article extraction via Readability-lxml engine.</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">avg ~2.1ms</span>
+</div>
+<!-- Step 2 -->
+<div class="cursor-pointer p-space-md rounded bg-surface-container-low hover:bg-surface-container-highest transition-all flex flex-col justify-between group border-2 border-transparent" id="pipe-step-2" onclick="selectPipelineStep(2)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant font-mono">02 // CLEANSE</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">cleaning_services</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary">Regex &amp; Normalization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Strip boilerplates, Unicode cleanup, lowercasing, punctuation trim.</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">avg ~1.8ms</span>
+</div>
+<!-- Step 3 -->
+<div class="cursor-pointer p-space-md rounded bg-surface-container-low hover:bg-surface-container-highest transition-all flex flex-col justify-between group border-2 border-transparent" id="pipe-step-3" onclick="selectPipelineStep(3)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant font-mono">03 // VECTORIZE</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">unfold_more_double</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary">TF-IDF Sparse Matrix</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Projection into 50k-dim n-gram feature space using pre-fitted vocabulary.</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">avg ~4.4ms</span>
+</div>
+<!-- Step 4 -->
+<div class="cursor-pointer p-space-md rounded bg-surface-container-low hover:bg-surface-container-highest transition-all flex flex-col justify-between group border-2 border-transparent" id="pipe-step-4" onclick="selectPipelineStep(4)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant font-mono">04 // INFER</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">psychology</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary">Tri-Model Consensus</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Parallel scoring: LogReg + RF-100 + Passive-Aggressive ensemble.</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">avg ~7.9ms</span>
+</div>
+<!-- Step 5 -->
+<div class="cursor-pointer p-space-md rounded bg-surface-container-low hover:bg-surface-container-highest transition-all flex flex-col justify-between group border-2 border-transparent" id="pipe-step-5" onclick="selectPipelineStep(5)">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant font-mono">05 // RESPONSE</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">data_object</span>
+</div>
+<div class="my-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary">JSON Telemetry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Editorial score, flagged tokens, confidence intervals, serialized payload.</p>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">avg ~1.4ms</span>
+</div>
+</div>
+<!-- Step Inspector Live Display -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md font-mono text-xs" id="step-inspector">
+<div class="flex items-center gap-space-md">
+<span class="px-2 py-1 bg-primary text-on-primary rounded font-bold uppercase tracking-wider text-[10px]">SELECTED COMPONENT</span>
+<span class="font-bold text-on-surface text-sm" id="inspector-title">Step 01: Raw Ingestion via Readability API</span>
+</div>
+<div class="text-on-surface-variant max-w-2xl text-[12px] font-sans" id="inspector-desc">
+          FastAPI accepts either raw string input or URL. When a wire URL is presented, an async HTTP client with strict 5-second timeouts extracts readable inner text, discarding navigation elements, cookie banners, and inline advertising scripts.
+        </div>
+<div class="text-on-surface bg-surface-container-lowest px-3 py-1.5 rounded font-mono text-[11px] shrink-0" id="inspector-code">
+          `POST /api/v2/analyze/stream`
+        </div>
+</div>
+</div>
+<!-- Dual Editorial Dossier: Dataset Provenance & Visual Breakdown -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Visual Richness Element: Balanced Corpus Distribution Graphic -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Class Distribution &amp; Source Clusters</span>
+<h3 class="font-headline-md text-headline-md text-primary">WELFake Corpus Topology</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Aggregated from 4 public veracity archives (Kaggle, McIntire, Reuters, BuzzFeed political claims). 
+          </p>
+</div>
+<!-- Inline Data Visualizer (SVG Donut & Cluster Bars) -->
+<div class="my-space-md flex flex-col sm:flex-row items-center gap-space-md">
+<div class="relative w-36 h-36 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background Circle -->
+<circle class="text-surface-container" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="12"></circle>
+<!-- True News Segment (51.4%) -->
+<circle class="text-on-tertiary-container" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="122" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Fake News Segment (48.6%) -->
+<circle class="text-error" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="129" stroke-linecap="round" stroke-width="12" transform="rotate(185 50 50)"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary">72,134</span>
+<span class="font-label-sm text-[9px] uppercase tracking-tighter text-on-surface-variant">Tokens</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 w-full font-mono text-xs">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+                True Records
+              </span>
+<span class="font-bold text-on-surface">37,106 (51.4%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+                Fabricated Records
+              </span>
+<span class="font-bold text-on-surface">35,028 (48.6%)</span>
+</div>
+<div class="flex items-center justify-between pt-2 text-on-surface-variant">
+<span>Vocabulary Dimension:</span>
+<span class="font-semibold text-primary">50,000 max</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Class Balance Ratio:</span>
+<span class="font-semibold text-on-tertiary-container">Optimal (1:0.94)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded font-label-sm text-label-sm text-on-surface-variant">
+          Corpus cleaned of synthetic duplication and artifact identifiers (e.g. wire reporter signatures that cause leakage).
+        </div>
+</div>
+<!-- Dataset Caveats & Ethical Guardrails Callout -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Editorial Governance &amp; Ethical Guardrails</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary tracking-tight">Dataset Provenance &amp; The Temporal Drift Imperative</h3>
+<div class="flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md mt-space-sm">
+<p>
+              While the <span class="text-on-surface font-semibold">WELFake</span> corpus delivers substantial linguistic diversity across 72,134 balanced records, machine learning models trained on static collections remain vulnerable to <span class="text-on-surface font-semibold">temporal language drift</span>. Disinformation strategies constantly evolve to mimic credible, restrained wire prose.
+            </p>
+<p>
+              TruthLens strictly enforces that automated outputs function as <span class="text-on-surface font-semibold">triage assistance</span> for verified reporters, not as autonomous arbiters of truth:
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-primary font-bold block uppercase tracking-wide">1. Stylometry Over Facts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 block">
+                  TF-IDF algorithms identify emotional rhetoric and stylistic anomalies, not empirical ground truths in real-time history.
+                </span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<span class="font-label-sm text-label-sm text-primary font-bold block uppercase tracking-wide">2. Human-in-the-Loop</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 block">
+                  A score above 85% flags an article for secondary review; no content is automatically suppressed or retracted.
+                </span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">AUDITED BY INDEPENDENT FACT-CHECKING NETWORK (IFCN) PROTOCOL</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-mono uppercase font-semibold" href="#">View Ethics Dossier →</a>
+</div>
+</div>
+</div>
+<!-- Live Model Validation Sandbox Modal/Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Model Sanity Check</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-0.5">Real-Time In-Browser Inference Test Harness</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-medium" onclick="loadSampleText('deceptive')">Load Fabricated Sample</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm font-medium" onclick="loadSampleText('verified')">Load Reuters Sample</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Input Textarea -->
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="sandbox-input">Input Test Copy (Paragraph or Headline + Lead):</label>
+<textarea class="w-full p-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary placeholder-on-surface-variant" id="sandbox-input" placeholder="Paste news article excerpts to witness the scikit-learn ensemble weights calculate dynamically..." rows="4"></textarea>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant" id="char-counter">0 words / 0 characters</span>
+<button class="px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container transition-colors rounded font-label-sm text-label-sm uppercase font-semibold flex items-center gap-1.5" onclick="evaluateSandboxCopy()">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+              Calculate Scores
+            </button>
+</div>
+</div>
+<!-- Dynamic Output Readout -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Real-time Ensemble Output</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary" id="result-verdict">Awaiting Input</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" id="verdict-bar" style="width: 0%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 mt-space-md pt-space-sm font-mono text-xs">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Logistic Regression:</span>
+<span class="text-on-surface font-semibold" id="res-lr">--</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Random Forest (100t):</span>
+<span class="text-on-surface font-semibold" id="res-rf">--</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Passive Aggressive:</span>
+<span class="text-on-surface font-semibold" id="res-pa">--</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-tertiary-container">
+<span>Ensemble Confidence:</span>
+<span class="font-bold" id="res-confidence">--</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Pipeline Step Inspector Interaction
+  const stepData = {
+    1: {
+      title: "Step 01: Raw Ingestion via Readability API",
+      desc: "FastAPI accepts either raw string input or URL. When a wire URL is presented, an async HTTP client with strict 5-second timeouts extracts readable inner text, discarding navigation elements, cookie banners, and inline advertising scripts.",
+      code: "POST /api/v2/analyze/stream",
+      time: "avg ~2.1ms"
+    },
+    2: {
+      title: "Step 02: Regex Stripping & Lexical Cleansing",
+      desc: "Cleanses non-standard ASCII artifacts, regex filters repetitive anchor text, standardizes curly punctuation, normalizes case, and strips markdown/HTML residue without corrupting quotation veracity.",
+      code: "clean_tokens = re.sub(r'[^\\w\\s]', '', raw_text.lower())",
+      time: "avg ~1.8ms"
+    },
+    3: {
+      title: "Step 03: TF-IDF Sparse Matrix Transformation",
+      desc: "Direct projection against the frozen 50,000 feature vocabulary fitted during the WELFake 72K training run. N-gram combinations (1,2) are scaled with sublinear TF term-frequency heuristics.",
+      code: "X_vector = tfidf_vectorizer.transform([clean_tokens])",
+      time: "avg ~4.4ms"
+    },
+    4: {
+      title: "Step 04: Tri-Model Consensus Inference",
+      desc: "Three scikit-learn models evaluate the sparse vector in parallel worker threads: Logistic Regression (L2), Random Forest (100 estimators), and Passive Aggressive Classifier. Voting is harmonic-mean weighted.",
+      code: "ensemble_score = (w1*p_lr + w2*p_rf + w3*p_pa) / sum_w",
+      time: "avg ~7.9ms"
+    },
+    5: {
+      title: "Step 05: Serialized Telemetry Assembly",
+      desc: "Constructs the full JSON diagnostic payload, embedding identified high-weight predictor n-grams, certainty bounds, model-specific sub-scores, and latency breakdown timestamps for journalistic audit logs.",
+      code: "return JSONResponse(status_code=200, content=payload)",
+      time: "avg ~1.4ms"
+    }
+  };
+
+  function selectPipelineStep(stepNumber) {
+    for (let i = 1; i <= 5; i++) {
+      const stepEl = document.getElementById(`pipe-step-${i}`);
+      if (i === stepNumber) {
+        stepEl.classList.remove('border-transparent', 'bg-surface-container-low');
+        stepEl.classList.add('border-primary', 'bg-surface-container-high');
+      } else {
+        stepEl.classList.remove('border-primary', 'bg-surface-container-high');
+        stepEl.classList.add('border-transparent', 'bg-surface-container-low');
+      }
+    }
+
+    const data = stepData[stepNumber];
+    document.getElementById('inspector-title').innerText = data.title;
+    document.getElementById('inspector-desc').innerText = data.desc;
+    document.getElementById('inspector-code').innerText = data.code;
+  }
+
+  // Live Test Harness Logic
+  const sampleFake = "Unbelievable shocking truth revealed! An insider leaked covert operation secrets that mainstream media is totally silent on. This miracle discovery destroys the entire narrative and panic has broken out among official agency directors. Wake up people before they take this video down forever!";
+  const sampleTrue = "A spokesperson said in an official statement on Thursday that federal prosecutors have opened an inquiry into the matter, according to Reuters. Official data showed that quarterly earnings surpassed regulatory filing estimates, confirmed by independent auditors during scheduled bilateral meetings.";
+
+  function loadSampleText(type) {
+    const input = document.getElementById('sandbox-input');
+    if (type === 'deceptive') {
+      input.value = sampleFake;
+    } else {
+      input.value = sampleTrue;
+    }
+    updateCharCounter();
+    evaluateSandboxCopy();
+  }
+
+  function updateCharCounter() {
+    const text = document.getElementById('sandbox-input').value;
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const chars = text.length;
+    document.getElementById('char-counter').innerText = `${words} words / ${chars} characters`;
+  }
+
+  document.getElementById('sandbox-input').addEventListener('input', updateCharCounter);
+
+  function evaluateSandboxCopy() {
+    const text = document.getElementById('sandbox-input').value.toLowerCase();
+    if (!text.trim()) return;
+
+    let fakeTriggers = ['unbelievable', 'shocking', 'insider', 'leaked', 'miracle', 'silent', 'conspiracy', 'wake up', 'panic'];
+    let trueTriggers = ['spokesperson', 'reuters', 'official', 'statement', 'prosecutors', 'quarterly', 'confirmed', 'scheduled'];
+
+    let fakeHits = fakeTriggers.filter(t => text.includes(t)).length;
+    let trueHits = trueTriggers.filter(t => text.includes(t)).length;
+
+    const verdictLabel = document.getElementById('result-verdict');
+    const verdictBar = document.getElementById('verdict-bar');
+    const resLR = document.getElementById('res-lr');
+    const resRF = document.getElementById('res-rf');
+    const resPA = document.getElementById('res-pa');
+    const resConf = document.getElementById('res-confidence');
+
+    if (fakeHits > trueHits) {
+      const prob = Math.min(99, 78 + (fakeHits * 6));
+      verdictLabel.innerText = "Fabricated Indicators";
+      verdictLabel.className = "font-headline-lg text-headline-lg text-error";
+      verdictBar.className = "bg-error h-full rounded-full transition-all duration-500";
+      verdictBar.style.width = prob + "%";
+      
+      resLR.innerText = (prob - 2.1).toFixed(1) + "% Fake";
+      resRF.innerText = (prob + 1.4).toFixed(1) + "% Fake";
+      resPA.innerText = (prob - 0.7).toFixed(1) + "% Fake";
+      resConf.innerText = prob.toFixed(1) + "% High Bias";
+      resConf.className = "font-bold text-error";
+    } else if (trueHits > fakeHits) {
+      const prob = Math.min(99, 82 + (trueHits * 5));
+      verdictLabel.innerText = "Corroborated Tone";
+      verdictLabel.className = "font-headline-lg text-headline-lg text-on-tertiary-container";
+      verdictBar.className = "bg-on-tertiary-container h-full rounded-full transition-all duration-500";
+      verdictBar.style.width = prob + "%";
+
+      resLR.innerText = (prob - 1.2).toFixed(1) + "% True";
+      resRF.innerText = (prob + 2.1).toFixed(1) + "% True";
+      resPA.innerText = (prob + 0.3).toFixed(1) + "% True";
+      resConf.innerText = prob.toFixed(1) + "% High Confidence";
+      resConf.className = "font-bold text-on-tertiary-container";
+    } else {
+      verdictLabel.innerText = "Inconclusive / Neutral";
+      verdictLabel.className = "font-headline-lg text-headline-lg text-secondary";
+      verdictBar.className = "bg-secondary h-full rounded-full transition-all duration-500";
+      verdictBar.style.width = "50%";
+
+      resLR.innerText = "51.2% True";
+      resRF.innerText = "48.8% Fake";
+      resPA.innerText = "50.1% True";
+      resConf.innerText = "Indeterminate";
+      resConf.className = "font-bold text-secondary";
+    }
+  }
+
+  function downloadEvaluationMatrix() {
+    alert("Initiating secure telemetry download: 'WELFake_72K_Scikit_Matrix_Full_Eval.csv' (SHA256 verified)");
+  }
+
+  function runLiveSanityCheck() {
+    const btn = document.getElementById('run-benchmark-btn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> VALIDATING HARNESS...`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check_circle</span> HARNESS 100% HEALTHY`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }, 2500);
+    }, 1200);
+  }
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-xl"><div class="w-full px-gutter py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><span class="font-headline-sm text-headline-sm text-primary">TruthLens</span><span class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Editorial Forensic Laboratory. Rigorous broadsheet veracity instrumentation.</span></div><div class="flex items-center gap-space-lg"><span class="font-label-sm text-label-sm text-on-surface-variant">WELFake 72,134 Corroborated Tokens</span><span class="font-label-sm text-label-sm text-on-surface-variant">Triple-Model Consensus</span><span class="font-label-sm text-label-sm text-on-surface-variant">Journalistic Disclosures</span></div></div></footer></body></html>

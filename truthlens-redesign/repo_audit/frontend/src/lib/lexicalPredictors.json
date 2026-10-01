@@ -1,0 +1,270 @@
+{
+  "logistic_regression": {
+    "fake": [
+      {
+        "term": "image",
+        "weight": 12.45
+      },
+      {
+        "term": "october",
+        "weight": 9.46
+      },
+      {
+        "term": "hillary",
+        "weight": 7.5
+      },
+      {
+        "term": "november",
+        "weight": 7.12
+      },
+      {
+        "term": "images",
+        "weight": 6.12
+      },
+      {
+        "term": "breaking",
+        "weight": 6.08
+      },
+      {
+        "term": "wire",
+        "weight": 5.36
+      },
+      {
+        "term": "dc",
+        "weight": 5.04
+      },
+      {
+        "term": "just",
+        "weight": 5.01
+      },
+      {
+        "term": "entire",
+        "weight": 4.27
+      },
+      {
+        "term": "watch",
+        "weight": 4.05
+      },
+      {
+        "term": "obama",
+        "weight": 3.88
+      }
+    ],
+    "real": [
+      {
+        "term": "reuters",
+        "weight": -30.39
+      },
+      {
+        "term": "breitbart",
+        "weight": -14.91
+      },
+      {
+        "term": "said",
+        "weight": -14.8
+      },
+      {
+        "term": "follow",
+        "weight": -10.91
+      },
+      {
+        "term": "twitter",
+        "weight": -9.1
+      },
+      {
+        "term": "com",
+        "weight": -7.33
+      },
+      {
+        "term": "york",
+        "weight": -6.58
+      },
+      {
+        "term": "pic",
+        "weight": -6.11
+      },
+      {
+        "term": "thursday",
+        "weight": -6.01
+      },
+      {
+        "term": "tuesday",
+        "weight": -5.53
+      },
+      {
+        "term": "friday",
+        "weight": -5.29
+      },
+      {
+        "term": "mr",
+        "weight": -5.2
+      }
+    ]
+  },
+  "passive_aggressive": {
+    "fake": [
+      {
+        "term": "image",
+        "weight": 32.1
+      },
+      {
+        "term": "october",
+        "weight": 20.8
+      },
+      {
+        "term": "flickr",
+        "weight": 19.29
+      },
+      {
+        "term": "breaking",
+        "weight": 18.56
+      },
+      {
+        "term": "getty",
+        "weight": 15.82
+      },
+      {
+        "term": "wire",
+        "weight": 15.77
+      },
+      {
+        "term": "november",
+        "weight": 15.44
+      },
+      {
+        "term": "wow",
+        "weight": 13.77
+      },
+      {
+        "term": "donate",
+        "weight": 13.03
+      },
+      {
+        "term": "screenshot",
+        "weight": 12.87
+      },
+      {
+        "term": "permission",
+        "weight": 12.51
+      },
+      {
+        "term": "nyc",
+        "weight": 11.95
+      }
+    ],
+    "real": [
+      {
+        "term": "reuters",
+        "weight": -74.1
+      },
+      {
+        "term": "pic",
+        "weight": -28.48
+      },
+      {
+        "term": "com",
+        "weight": -27.28
+      },
+      {
+        "term": "follow",
+        "weight": -22.19
+      },
+      {
+        "term": "breitbart",
+        "weight": -20.8
+      },
+      {
+        "term": "york",
+        "weight": -12.14
+      },
+      {
+        "term": "said",
+        "weight": -11.09
+      },
+      {
+        "term": "twitter",
+        "weight": -10.56
+      },
+      {
+        "term": "approach",
+        "weight": -9.49
+      },
+      {
+        "term": "extend",
+        "weight": -9.29
+      },
+      {
+        "term": "willingness",
+        "weight": -9.19
+      },
+      {
+        "term": "isnt",
+        "weight": -8.46
+      }
+    ]
+  },
+  "random_forest": {
+    "top_overall": [
+      {
+        "term": "reuters",
+        "importance": 0.094
+      },
+      {
+        "term": "said",
+        "importance": 0.0526
+      },
+      {
+        "term": "image",
+        "importance": 0.0201
+      },
+      {
+        "term": "washington",
+        "importance": 0.0118
+      },
+      {
+        "term": "york",
+        "importance": 0.0107
+      },
+      {
+        "term": "breitbart",
+        "importance": 0.0104
+      },
+      {
+        "term": "hillary",
+        "importance": 0.0091
+      },
+      {
+        "term": "just",
+        "importance": 0.0087
+      },
+      {
+        "term": "tuesday",
+        "importance": 0.0083
+      },
+      {
+        "term": "video",
+        "importance": 0.0079
+      },
+      {
+        "term": "wednesday",
+        "importance": 0.0075
+      },
+      {
+        "term": "thursday",
+        "importance": 0.0072
+      },
+      {
+        "term": "minister",
+        "importance": 0.0067
+      },
+      {
+        "term": "mr",
+        "importance": 0.0065
+      },
+      {
+        "term": "monday",
+        "importance": 0.0061
+      }
+    ]
+  }
+}

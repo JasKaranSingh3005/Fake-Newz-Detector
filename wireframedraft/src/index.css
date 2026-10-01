@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --surface: #f9f9ff;
+  --on-surface: #111c2d;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f0f3ff;
+  --surface-container: #e7eeff;
+  --surface-container-high: #dee8ff;
+  --surface-container-highest: #d8e3fb;
+  --on-surface-variant: #45464d;
+  --primary: #000000;
+  --on-primary: #ffffff;
+  --primary-container: #131a33;
+  --inverse-surface: #263143;
+  --inverse-on-surface: #ecf1ff;
+  --outline-variant: #c6c6ce;
+  --outline: #76767e;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --secondary-container: #d0d9fd;
+  --on-secondary-container: #555e7d;
+  --on-tertiary-container: #069669;
+}
+
+.dark {
+  --surface: #0a0f1d;
+  --on-surface: #f1f5f9;
+  --surface-container-lowest: #0e172a;
+  --surface-container-low: #131f38;
+  --surface-container: #192746;
+  --surface-container-high: #203156;
+  --surface-container-highest: #283d6a;
+  --on-surface-variant: #94a3b8;
+  --primary: #ffffff;
+  --on-primary: #0a0f1d;
+  --primary-container: #223254;
+  --inverse-surface: #f8fafc;
+  --inverse-on-surface: #0a0f1d;
+  --outline-variant: #334155;
+  --outline: #64748b;
+  --error: #ef4444;
+  --error-container: #450a0a;
+  --on-error-container: #fecaca;
+  --secondary-container: #1e293b;
+  --on-secondary-container: #cbd5e1;
+  --on-tertiary-container: #10b981;
+}
+
+@theme {
+  --color-error: var(--error);
+  --color-surface-dim: #cfdaf2;
+  --color-inverse-surface: var(--inverse-surface);
+  --color-secondary-fixed: #dbe1ff;
+  --color-tertiary: #000000;
+  --color-on-tertiary-fixed-variant: #005137;
+  --color-surface-bright: #f9f9ff;
+  --color-primary-container: var(--primary-container);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-variant: var(--surface-container-highest);
+  --color-on-primary: var(--on-primary);
+  --color-surface-tint: #565d79;
+  --color-secondary-fixed-dim: #bdc5e9;
+  --color-on-secondary-fixed-variant: #3d4664;
+  --color-on-primary-fixed: #131a33;
+  --color-on-tertiary-fixed: #002114;
+  --color-background: var(--surface);
+  --color-outline-variant: var(--outline-variant);
+  --color-inverse-primary: #bec5e5;
+  --color-primary-fixed-dim: #bec5e5;
+  --color-surface-container: var(--surface-container);
+  --color-surface: var(--surface);
+  --color-primary-fixed: #dbe1ff;
+  --color-secondary: #545d7c;
+  --color-on-primary-fixed-variant: #3e4660;
+  --color-on-error-container: var(--on-error-container);
+  --color-on-error: #ffffff;
+  --color-tertiary-container: #002114;
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed-dim: #68dba9;
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-error-container: var(--error-container);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-primary-container: #7b83a0;
+  --color-outline: var(--outline);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-on-secondary: #ffffff;
+  --color-on-surface: var(--on-surface);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-tertiary-fixed: #85f8c4;
+  --color-on-background: var(--on-surface);
+  --color-on-secondary-fixed: #111a36;
+
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-margin: 2rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-md: 1rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-xs: 0.25rem;
+
+  --font-headline-sm: "Newsreader", serif;
+  --font-headline-md: "Newsreader", serif;
+  --font-headline-xl-mobile: "Newsreader", serif;
+  --font-headline-lg: "Newsreader", serif;
+  --font-headline-lg-mobile: "Newsreader", serif;
+  --font-headline-xl: "Newsreader", serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-label-lg: "JetBrains Mono", monospace;
+  --font-label-md: "JetBrains Mono", monospace;
+  --font-label-sm: "JetBrains Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  body {
+    overscroll-behavior: none;
+    background-color: var(--surface);
+    color: var(--on-surface);
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@utility text-headline-sm {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@utility text-headline-md {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+@utility text-headline-lg {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+@utility text-headline-lg-mobile {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@utility text-headline-xl {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+@utility text-headline-xl-mobile {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+@utility text-body-lg {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+@utility text-body-md {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@utility text-body-sm {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+@utility text-label-lg {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+@utility text-label-md {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+@utility text-label-sm {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
