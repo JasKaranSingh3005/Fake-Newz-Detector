@@ -60,7 +60,7 @@ export default function Benchmarks() {
           <div
             className="w-24 h-24 rounded-full shrink-0"
             style={{
-              background: `conic-gradient(rgb(var(--c-real)) 0% ${realPct}%, rgb(var(--c-fake)) ${realPct}% 100%)`,
+              background: `conic-gradient(#059669 0% ${realPct}%, #DC2626 ${realPct}% 100%)`,
             }}
             aria-hidden="true"
           />

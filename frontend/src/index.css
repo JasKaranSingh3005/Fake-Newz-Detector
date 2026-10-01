@@ -4,89 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Theme tokens as space-separated RGB channels (see tailwind.config.js) */
-:root {
-  --c-canvas: 248 250 252;
-  --c-paper: 255 255 255;
-  --c-drawer: 241 245 249;
-  --c-ink: 11 19 43;
-  --c-ink-soft: 71 85 105;
-  --c-ink-faint: 100 116 139;
-  --c-rule: 226 232 240;
-  --c-rule-strong: 203 213 225;
-  --c-accent: 111 118 147;
-  --c-primary: 111 118 147;
-  --c-primary-hover: 116 118 131;
-  --c-real: 5 150 105;
-  --c-real-bg: 236 253 245;
-  --c-warn: 217 119 6;
-  --c-warn-bg: 254 243 199;
-  --c-fake: 220 38 38;
-  --c-fake-bg: 254 226 226;
-}
-
-.dark {
-  color-scheme: dark;
-  --c-canvas: 11 16 32;
-  --c-paper: 17 24 43;
-  --c-drawer: 24 33 56;
-  --c-ink: 232 236 244;
-  --c-ink-soft: 170 180 199;
-  --c-ink-faint: 135 147 170;
-  --c-rule: 36 46 71;
-  --c-rule-strong: 55 67 98;
-  --c-accent: 150 160 214;
-  --c-primary: 100 108 148;
-  --c-primary-hover: 84 92 128;
-  --c-real: 52 211 153;
-  --c-real-bg: 6 44 34;
-  --c-warn: 251 191 36;
-  --c-warn-bg: 66 44 8;
-  --c-fake: 248 113 113;
-  --c-fake-bg: 69 20 24;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  background: rgb(var(--c-canvas));
-  color: rgb(var(--c-ink));
-}
-
-::selection {
-  background: rgba(138, 150, 249, 0.35);
-}
-
-.focus-ring:focus-visible {
-  outline: 2px solid #8A96F9;
-  outline-offset: 2px;
-}
-
-/* Aligned digits for counts and latencies */
-.tabular {
-  font-variant-numeric: tabular-nums;
-}
-
-/* Results panel entrance (replaces the inline <style> in Detector) */
-@keyframes rise {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: none; }
-}
-.rise {
-  animation: rise 0.3s ease-out both;
-}
-
-/* Confidence bars fill from the left */
-@keyframes grow {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}
-.grow {
-  transform-origin: left;
-  animation: grow 0.6s ease-out both;
+  background: #F8FAFC;
+  color: #0B132B;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -98,4 +23,9 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid #8A96F9;
+  outline-offset: 2px;
 }

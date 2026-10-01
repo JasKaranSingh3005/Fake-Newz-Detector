@@ -1,28 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-
-// Colors resolve to CSS variables (defined in src/index.css for light and .dark).
-// The <alpha-value> placeholder keeps opacity modifiers like border-fake/30 working.
-const c = (name) => `rgb(var(--c-${name}) / <alpha-value>)`
-
 export default {
-  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        canvas: c('canvas'),
-        paper: c('paper'),
-        drawer: c('drawer'),
-        ink: c('ink'),
-        'ink-soft': c('ink-soft'),
-        'ink-faint': c('ink-faint'),
-        rule: c('rule'),
-        'rule-strong': c('rule-strong'),
-        accent: c('accent'),
-        primary: { DEFAULT: c('primary'), hover: c('primary-hover') },
-        real: { DEFAULT: c('real'), bg: c('real-bg') },
-        warn: { DEFAULT: c('warn'), bg: c('warn-bg') },
-        fake: { DEFAULT: c('fake'), bg: c('fake-bg') },
+        canvas: '#F8FAFC',
+        paper: '#FFFFFF',
+        drawer: '#F1F5F9',
+        ink: '#0B132B',
+        'ink-soft': '#475569',
+        'ink-faint': '#64748B',
+        rule: '#E2E8F0',
+        'rule-strong': '#CBD5E1',
+        primary: { DEFAULT: '#6F7693', hover: '#747683' },
+        real: { DEFAULT: '#059669', bg: '#ECFDF5' },
+        warn: { DEFAULT: '#D97706', bg: '#FEF3C7' },
+        fake: { DEFAULT: '#DC2626', bg: '#FEE2E2' },
       },
       fontFamily: {
         serif: ['Newsreader', 'Georgia', 'serif'],

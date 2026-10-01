@@ -1,7 +1,6 @@
 import { Github } from 'lucide-react'
 import HealthBadge from './HealthBadge'
 import Logo from './Logo'
-import ThemeToggle from './ThemeToggle'
 
 const GITHUB_URL = 'https://github.com/JasKaranSingh3005/fake-newz-detector'
 
@@ -32,9 +31,8 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-4">
           <HealthBadge />
-          <ThemeToggle />
           <a
             href={GITHUB_URL}
             target="_blank"
