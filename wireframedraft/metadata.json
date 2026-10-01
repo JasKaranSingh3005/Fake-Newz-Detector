@@ -1,8 +1,0 @@
-{
-  "name": "WireframeDraft",
-  "description": "Rapidly assemble app prototypes by hotlinking images directly into interactive interface layouts.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
