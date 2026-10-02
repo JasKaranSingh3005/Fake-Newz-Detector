@@ -1,38 +1,38 @@
 import { FileText, Sparkles, Hash, CheckCircle2 } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const STEPS = [
-  { icon: FileText, title: 'Submit article', desc: 'Text comes in via the web app or API.' },
-  { icon: Sparkles, title: 'Preprocessing', desc: 'Lowercased, stripped of links, HTML, and punctuation.' },
-  { icon: Hash, title: 'TF-IDF vectorization', desc: 'Text converted into weighted term features.' },
-  { icon: CheckCircle2, title: 'Model prediction', desc: 'All three classifiers vote independently.' },
+  { icon: FileText, title: 'Submit article', desc: 'Text comes in via the web app or the REST API.' },
+  { icon: Sparkles, title: 'Preprocessing', desc: 'Lowercased and stripped of links, HTML, and punctuation.' },
+  { icon: Hash, title: 'TF-IDF vectorization', desc: 'Text is converted into weighted term-frequency features.' },
+  { icon: CheckCircle2, title: 'Model prediction', desc: 'Each classifier votes independently on the label.' },
 ]
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="px-6 py-20 border-t border-rule bg-canvas">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-serif font-semibold text-ink text-center">How It Works</h2>
-        <p className="mt-2 text-ink-soft text-center text-sm">
-          Text preprocessing and TF-IDF vectorization feed three independent classifiers.
-        </p>
+    <section id="how-it-works" className="border-b border-rule px-4 py-20 sm:px-6 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading
+          eyebrow="Pipeline"
+          title="How it works"
+          description="A classic, transparent NLP pipeline — no black-box LLM. Every prediction can be traced to the words in your text."
+          center
+        />
 
-        <div className="mt-12 grid sm:grid-cols-4 gap-6">
+        <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
-            <div key={step.title} className="relative text-center">
-              {i < STEPS.length - 1 && (
-                <div
-                  className="hidden sm:block absolute top-6 left-[calc(50%+28px)] w-[calc(100%-56px)] h-px bg-rule-strong"
-                  aria-hidden="true"
-                />
-              )}
-              <div className="relative w-12 h-12 mx-auto rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
-                <step.icon className="w-5 h-5 text-primary" aria-hidden="true" />
+            <li key={step.title} className="rounded-xl border border-rule bg-paper p-6 shadow-drawer">
+              <div className="flex items-center justify-between">
+                <span className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <step.icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="font-mono text-xs text-ink-faint">0{i + 1}</span>
               </div>
-              <h3 className="mt-4 text-sm font-semibold text-ink">{step.title}</h3>
-              <p className="mt-1.5 text-xs text-ink-soft leading-relaxed">{step.desc}</p>
-            </div>
+              <h3 className="mt-5 font-semibold text-ink">{step.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{step.desc}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

@@ -1,56 +1,51 @@
-import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { Box, Code2, Cpu, Database, FileCode, Package, Server } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 
 const TECH = [
-  { label: 'Frontend', value: 'React + TypeScript' },
-  { label: 'Backend', value: 'FastAPI' },
-  { label: 'Machine Learning', value: 'scikit-learn' },
-  { label: 'Feature Extraction', value: 'TF-IDF' },
-  { label: 'Models', value: 'Logistic Regression, Random Forest, Passive Aggressive' },
-  { label: 'Serialization', value: 'joblib' },
-  { label: 'Containerization', value: 'Docker' },
+  { icon: Code2, label: 'Frontend', value: 'React + TypeScript + Vite' },
+  { icon: Server, label: 'Backend', value: 'FastAPI on Render' },
+  { icon: Cpu, label: 'Machine learning', value: 'scikit-learn' },
+  { icon: FileCode, label: 'Features', value: 'TF-IDF vectorization' },
+  { icon: Package, label: 'Serialization', value: 'joblib' },
+  { icon: Box, label: 'Containerization', value: 'Docker' },
 ]
 
 export default function About() {
-  const [open, setOpen] = useState(false)
-
   return (
-    <section id="about" className="px-6 py-20 border-t border-rule bg-paper">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-serif font-semibold text-ink text-center">The WELFake Dataset</h2>
-        <p className="mt-4 text-ink-soft text-sm leading-relaxed text-center">
-          Approximately 72,000 raw articles, merged from four sources: Kaggle, McIntire, Reuters, and BuzzFeed
-          Political. After cleaning, the training corpus used for these models contains 63,121 articles. This
-          breadth helps reduce overfitting to any single source's writing style, but as shown in Model Benchmarks,
-          the model has also picked up on source-attribution words themselves — it does not independently verify
-          facts.
-        </p>
+    <section id="about" className="px-4 py-20 sm:px-6 sm:py-24">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <SectionHeading eyebrow="About" title="The WELFake dataset" />
+          <div className="mt-5 space-y-4 leading-relaxed text-ink-soft">
+            <p>
+              Approximately 72,000 raw articles, merged from four sources: Kaggle, McIntire, Reuters, and BuzzFeed
+              Political. After cleaning, the training corpus contains 63,121 articles.
+            </p>
+            <p>
+              This breadth helps reduce overfitting to any single source&apos;s writing style — but as the benchmarks
+              show, the models also pick up on source-attribution words themselves. TruthLens classifies writing
+              patterns; it does not independently verify facts.
+            </p>
+          </div>
+          <div className="mt-6 inline-flex items-center gap-2 rounded-lg border border-rule bg-paper px-3 py-2 text-sm text-ink-soft">
+            <Database className="h-4 w-4 text-primary" aria-hidden="true" />
+            63,121 cleaned articles · 80/20 train/test split
+          </div>
+        </div>
 
-        <div className="mt-10 rounded-lg border border-rule-strong bg-canvas overflow-hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            aria-expanded={open}
-            aria-controls="tech-details"
-            className="w-full flex items-center justify-between px-6 py-4 text-left text-sm font-semibold text-ink focus-ring"
-          >
-            Technical Details
-            <ChevronDown
-              className={`w-4 h-4 text-ink-faint transition-transform ${open ? 'rotate-180' : ''}`}
-              aria-hidden="true"
-            />
-          </button>
-          {open && (
-            <div id="tech-details" className="px-6 pb-5 border-t border-rule">
-              <dl className="mt-4 space-y-2.5">
-                {TECH.map((item) => (
-                  <div key={item.label} className="flex justify-between gap-4 text-sm">
-                    <dt className="text-ink-faint">{item.label}</dt>
-                    <dd className="text-ink text-right">{item.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          )}
+        <div>
+          <h3 className="text-sm font-semibold text-ink">Technology</h3>
+          <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+            {TECH.map((item) => (
+              <div key={item.label} className="flex items-start gap-3 rounded-xl border border-rule bg-paper p-4">
+                <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                <div>
+                  <dt className="text-xs text-ink-faint">{item.label}</dt>
+                  <dd className="text-sm font-medium text-ink">{item.value}</dd>
+                </div>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

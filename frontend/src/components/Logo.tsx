@@ -1,22 +1,31 @@
-export default function Logo({ className = 'h-9' }: { className?: string }) {
+export function LogoMark({ className = 'h-[18px] w-[18px]' }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TruthLens">
-      <g transform="translate(4, 4)">
-        <circle cx="16" cy="16" r="14" stroke="#0B132B" strokeWidth="2.5" fill="#F0F3FF" />
-        <circle cx="16" cy="16" r="10" stroke="#059669" strokeWidth="1.5" strokeDasharray="2 2" />
-        <line x1="16" y1="4" x2="16" y2="8" stroke="#0B132B" strokeWidth="2" strokeLinecap="round" />
-        <line x1="16" y1="24" x2="16" y2="28" stroke="#0B132B" strokeWidth="2" strokeLinecap="round" />
-        <line x1="4" y1="16" x2="8" y2="16" stroke="#0B132B" strokeWidth="2" strokeLinecap="round" />
-        <line x1="24" y1="16" x2="28" y2="16" stroke="#0B132B" strokeWidth="2" strokeLinecap="round" />
-        <path d="M16 11 L20 16 L16 21 L12 16 Z" fill="#0B132B" />
-        <circle cx="16" cy="16" r="1.5" fill="#10B981" />
-      </g>
-      <text x="44" y="24" fontFamily="'Newsreader', Georgia, serif" fontSize="20" fontWeight="700" fill="#0B132B" letterSpacing="-0.02em">
-        Truth<tspan fill="#059669">Lens</tspan>
-      </text>
-      <text x="45" y="33" fontFamily="'Inter', sans-serif" fontSize="7.5" fontWeight="600" fill="#64748B" letterSpacing="0.12em">
-        EDITORIAL INTELLIGENCE
-      </text>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M3 5h12M3 9h5M3 13h4M3 17h6" opacity={0.55} />
+      <circle cx="14.5" cy="12.5" r="4.75" />
+      <path d="M12.5 12.5h4" />
+      <path d="m18 16 3 3" strokeWidth={2.5} />
     </svg>
+  )
+}
+
+export default function Logo() {
+  return (
+    <span className="inline-flex items-center gap-2.5">
+      <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-fg">
+        <LogoMark />
+      </span>
+      <span className="text-[17px] font-semibold tracking-tight text-ink">
+        Truth<span className="text-primary">Lens</span>
+      </span>
+    </span>
   )
 }

@@ -1,33 +1,39 @@
-import { useEffect, useState } from 'react'
-import { checkHealth } from '../lib/api'
+import { useEffect } from 'react'
+import { runHealthCheck, useHealth, type HealthStatus } from '../lib/health'
 
-export default function HealthBadge() {
-  const [online, setOnline] = useState<boolean | null>(null)
+const CONFIG: Record<HealthStatus, { label: string; dot: string; title: string }> = {
+  checking: { label: 'Checking', dot: 'bg-ink-faint', title: 'Checking API status…' },
+  waking: {
+    label: 'Waking up',
+    dot: 'bg-warn animate-pulse',
+    title: 'The API is starting from a cold start. This can take up to a minute.',
+  },
+  online: { label: 'API online', dot: 'bg-real', title: 'The ML API is online.' },
+  offline: { label: 'API offline', dot: 'bg-fake', title: 'The ML API could not be reached.' },
+}
+
+export default function HealthBadge({ className = '' }: { className?: string }) {
+  const status = useHealth()
 
   useEffect(() => {
-    let mounted = true
-    const check = async () => {
-      const result = await checkHealth()
-      if (mounted) setOnline(result)
-    }
-    check()
-    const interval = setInterval(check, 60000)
-    return () => {
-      mounted = false
-      clearInterval(interval)
-    }
+    runHealthCheck()
+    const interval = setInterval(runHealthCheck, 60000)
+    return () => clearInterval(interval)
   }, [])
 
-  const label = online === null ? 'CHECKING' : online ? 'LIVE' : 'OFFLINE'
-  const dot = online === null ? 'bg-ink-faint' : online ? 'bg-real' : 'bg-fake'
+  const { label, dot, title } = CONFIG[status]
 
   return (
     <div
-      className="flex items-center gap-1.5 font-mono text-[11px] tracking-wider text-ink-soft border border-rule-strong rounded px-2 py-1"
       role="status"
       aria-live="polite"
+      title={title}
+      className={`inline-flex items-center gap-2 rounded-full border border-rule bg-paper px-3 py-1 text-xs font-medium text-ink-soft ${className}`}
     >
-      <span className={`w-1.5 h-1.5 rounded-full ${dot}`} aria-hidden="true" />
+      <span className="relative flex h-2 w-2" aria-hidden="true">
+        {status === 'online' && <span className="absolute inset-0 animate-ping rounded-full bg-real opacity-40" />}
+        <span className={`relative h-2 w-2 rounded-full ${dot}`} />
+      </span>
       {label}
     </div>
   )

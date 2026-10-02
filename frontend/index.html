@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TruthLens — Editorial Intelligence</title>
+    <title>TruthLens — AI Fake News Detection</title>
     <meta name="description" content="Analyze news headlines and articles using machine-learning models trained on the WELFake dataset." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <script>
+      // Applied before first paint so there is no light/dark flash.
+      (function () {
+        try {
+          var stored = localStorage.getItem('truthlens-theme')
+          var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
+          if (dark) document.documentElement.classList.add('dark')
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', dark ? '#0A0A0A' : '#FFFFFF')
+        } catch (e) {}
+      })()
+    </script>
   </head>
-  <body class="bg-canvas">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

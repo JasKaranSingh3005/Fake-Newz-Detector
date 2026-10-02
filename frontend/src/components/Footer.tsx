@@ -1,25 +1,41 @@
-const GITHUB_URL = 'https://github.com/JasKaranSingh3005/fake-newz-detector'
+import { BookOpen, Github } from 'lucide-react'
+import { GITHUB_URL } from './Header'
+import Logo from './Logo'
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-12 border-t border-rule bg-canvas">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-sm font-semibold text-ink font-serif">TruthLens — Editorial Intelligence</p>
-        <p className="mt-1 text-xs text-ink-faint">Built with FastAPI, scikit-learn and modern web technologies.</p>
-
-        <div className="mt-4 flex justify-center gap-5 font-mono text-xs">
-          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="text-ink-soft hover:text-ink transition-colors focus-ring rounded-sm">
-            GITHUB
-          </a>
-          <a href={`${API_URL}/docs`} target="_blank" rel="noopener noreferrer" className="text-ink-soft hover:text-ink transition-colors focus-ring rounded-sm">
-            API DOCS
-          </a>
+    <footer className="border-t border-rule bg-paper/40 px-4 py-12 sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
+        <div className="max-w-sm">
+          <Logo />
+          <p className="mt-3 text-sm text-ink-soft">Built with FastAPI, scikit-learn, React and TypeScript.</p>
+          <p className="mt-3 text-xs leading-relaxed text-ink-faint">
+            This tool provides probabilistic ML classifications and does not independently verify factual claims.
+          </p>
         </div>
 
-        <p className="mt-6 text-[11px] text-ink-faint max-w-md mx-auto leading-relaxed">
-          This tool provides probabilistic ML classifications and does not independently verify factual claims.
-        </p>
+        <nav aria-label="Footer" className="flex flex-wrap gap-2">
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 text-sm text-ink-soft transition-colors hover:bg-drawer hover:text-ink focus-ring"
+          >
+            <Github className="h-4 w-4" aria-hidden="true" />
+            GitHub
+          </a>
+          <a
+            href={`${API_URL}/docs`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md border border-rule px-3 py-2 text-sm text-ink-soft transition-colors hover:bg-drawer hover:text-ink focus-ring"
+          >
+            <BookOpen className="h-4 w-4" aria-hidden="true" />
+            API Docs
+          </a>
+        </nav>
       </div>
     </footer>
   )

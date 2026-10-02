@@ -10,12 +10,18 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div className="min-h-screen bg-canvas text-ink">
+      <a
+        href="#detector"
+        className="sr-only z-50 rounded-md bg-primary px-4 py-2 text-primary-fg focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      >
+        Skip to detector
+      </a>
       <Header />
       <main>
         <Hero />
+        <HowItWorks />
         <Detector />
         <Benchmarks />
-        <HowItWorks />
         <Models />
         <About />
       </main>

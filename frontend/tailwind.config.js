@@ -1,35 +1,60 @@
 /** @type {import('tailwindcss').Config} */
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`
+
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        canvas: '#F8FAFC',
-        paper: '#FFFFFF',
-        drawer: '#F1F5F9',
-        ink: '#0B132B',
-        'ink-soft': '#475569',
-        'ink-faint': '#64748B',
-        rule: '#E2E8F0',
-        'rule-strong': '#CBD5E1',
-        primary: { DEFAULT: '#6F7693', hover: '#747683' },
-        real: { DEFAULT: '#059669', bg: '#ECFDF5' },
-        warn: { DEFAULT: '#D97706', bg: '#FEF3C7' },
-        fake: { DEFAULT: '#DC2626', bg: '#FEE2E2' },
+        canvas: token('canvas'),
+        paper: token('paper'),
+        drawer: token('drawer'),
+        ink: token('ink'),
+        'ink-soft': token('ink-soft'),
+        'ink-faint': token('ink-faint'),
+        rule: token('rule'),
+        'rule-strong': token('rule-strong'),
+        primary: {
+          DEFAULT: token('primary'),
+          hover: token('primary-hover'),
+          fg: token('primary-fg'),
+        },
+        real: { DEFAULT: token('real'), bg: token('real-bg') },
+        warn: { DEFAULT: token('warn'), bg: token('warn-bg') },
+        fake: { DEFAULT: token('fake'), bg: token('fake-bg') },
       },
       fontFamily: {
-        serif: ['Newsreader', 'Georgia', 'serif'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"Inter Tight"', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
-        DEFAULT: '0.25rem',
-        md: '0.375rem',
-        lg: '0.5rem',
+        DEFAULT: '0',
+        sm: '0',
+        md: '0',
+        lg: '0',
+        xl: '0',
+        '2xl': '0',
       },
       boxShadow: {
-        drawer: '0 4px 20px -2px rgba(11, 19, 43, 0.06)',
-        modal: '0 12px 32px -4px rgba(11, 19, 43, 0.12)',
+        drawer: 'none',
+        modal: 'none',
+      },
+      keyframes: {
+        'fade-up': {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        grow: { from: { width: '0%' } },
+        shimmer: {
+          from: { transform: 'translateX(-100%)' },
+          to: { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.4s ease-out both',
+        grow: 'grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) both',
+        shimmer: 'shimmer 1.4s ease-in-out infinite',
       },
     },
   },
