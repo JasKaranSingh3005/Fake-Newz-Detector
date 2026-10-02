@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends git git-lfs \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt fastapi "uvicorn[standard]" pydantic
 
-COPY . .
-RUN git lfs install --local \
-    && (git lfs pull || echo "git lfs pull failed or repo has no .git context — see README if models/*.pkl are pointer stubs")
+#COPY . .
+#RUN git lfs install --local \
+#    && (git lfs pull || echo "git lfs pull failed or repo has no .git context — see README if models/*.pkl are pointer stubs")
 
 # The API needs trained model + vectorizer .pkl files present in
 # models/ at build time — run `python src/train.py` and commit the
